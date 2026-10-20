@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chekly — траты на продукты</title>
+  <meta name="description" content="Считает расходы в Пятёрочке и Магните по электронным чекам из почты">
+  <meta name="theme-color" content="#2D6A4F">
+  <meta property="og:title" content="Chekly — траты на продукты">
+  <meta property="og:description" content="Считает расходы в Пятёрочке и Магните по электронным чекам из почты">
+  <meta property="og:image" content="https://chekly.space/icon.png">
+  <link rel="icon" href="/icon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <link rel="stylesheet" href="/style.css?v=6">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="/site.js?v=6" defer></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+    <symbol id="i-pie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10 10 0 0 1 12 5c6 0 9.5 7 9.5 7a17 17 0 0 1-2.6 3.4"/><path d="M6.2 6.6A17 17 0 0 0 2.5 12S6 19 12 19a9.6 9.6 0 0 0 4.4-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-wifi-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.9a10 10 0 0 1 5.2-2.8"/><path d="M19 12.9a10 10 0 0 0-2.1-1.6"/><path d="M12 20h.01"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/icon.png" alt=""> Chekly</a>
+    <nav class="nav">
+      <a href="#features">Возможности</a>
+      <a href="#privacy">Приватность</a>
+      <a href="#start">Как начать</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Бесплатно и без рекламы</span>
+        <h1>Chekly сам посчитает <span class="accent">траты в магазинах</span></h1>
+        <p class="lead">По электронным чекам из почты Пятёрочки и Магнита — без сканирования и ручного ввода</p>
+        <div class="cta">
+          <a class="btn" href="https://www.rustore.ru/catalog/app/com.chekly.chekly"><svg><use href="#i-down"/></svg>Скачать в RuStore</a>
+        </div>
+        <p class="soon">Скоро в Google Play и App Store</p>
+      </div>
+
+      <div class="stack-col">
+        <div class="stack">
+          <img class="s s-left" src="/img/02-analytics.jpg" alt="Аналитика: график и круговая диаграмма">
+          <img class="s s-right" src="/img/03-receipts.jpg" alt="Список чеков">
+          <img class="s s-main" src="/img/01-home.jpg" alt="Главная: траты за месяц по категориям">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <p class="kicker reveal">Возможности</p>
+      <h2 class="reveal">Что покажет Chekly</h2>
+      <div class="grid">
+        <div class="card reveal"><div class="ic"><svg><use href="#i-trend"/></svg></div><p>Траты за месяц и сравнение с прошлым</p></div>
+        <div class="card reveal"><div class="ic"><svg><use href="#i-pie"/></svg></div><p>Расходы по категориям: молочные продукты, мясо и рыба, овощи и фрукты, сладкое и другие</p></div>
+        <div class="card reveal"><div class="ic"><svg><use href="#i-star"/></svg></div><p>Товары, на которые уходит больше всего денег</p></div>
+        <div class="card reveal"><div class="ic"><svg><use href="#i-receipt"/></svg></div><p>Все чеки с товарами и ценами</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="inner reveal">
+        <p>Ничего не нужно ни сканировать, ни вводить вручную: новые чеки загружаются из почты при открытии приложения. Смотреть траты можно и без интернета.</p>
+        <span class="big" aria-hidden="true">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <p class="kicker reveal">Приватность</p>
+      <h2 class="reveal">Как Chekly обращается с данными</h2>
+      <div class="trust-list">
+        <div class="trust reveal"><div class="ic"><svg><use href="#i-mail"/></svg></div><p>Читает только письма с чеками, остальную почту не открывает</p></div>
+        <div class="trust reveal"><div class="ic"><svg><use href="#i-eye-off"/></svg></div><p>Ничего не меняет в почте: не отправляет, не удаляет, не помечает прочитанным</p></div>
+        <div class="trust reveal"><div class="ic"><svg><use href="#i-phone"/></svg></div><p>Хранит чеки только на телефоне, своего сервера у приложения нет</p></div>
+      </div>
+      <p class="note reveal">Подробнее — в <a href="/privacy/">политике конфиденциальности</a>.</p>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <p class="kicker reveal">Как начать</p>
+      <h2 class="reveal">Настроить нужно один раз</h2>
+      <div class="steps">
+        <div class="step reveal"><p>Укажите почту в приложении магазина</p></div>
+        <div class="step reveal"><p>Включите чеки на эту почту</p></div>
+        <div class="step reveal"><p>Разрешите доступ почтовым программам в настройках ящика</p></div>
+        <div class="step reveal"><p>Подключите почту в Chekly</p></div>
+      </div>
+      <p class="note reveal">Chekly покажет, где это сделать.</p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2 class="reveal">Начните считать траты</h2>
+      <p class="note reveal" style="margin:0 0 28px">Поддерживаются чеки Пятёрочки и Магнита. Подключить можно почту Mail.ru или Яндекса.</p>
+      <div class="cta reveal">
+        <a class="btn" href="https://www.rustore.ru/catalog/app/com.chekly.chekly"><svg><use href="#i-down"/></svg>Скачать в RuStore</a>
+      </div>
+      <p class="soon">Скоро в Google Play и App Store</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Александр Алтухов</span>
+    <span><a href="/privacy/">Политика конфиденциальности</a> · <a href="mailto:chekly-help@yandex.com">chekly-help@yandex.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
