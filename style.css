@@ -66,7 +66,9 @@ a[href^="mailto:"] { white-space: nowrap; }
 @media (max-width: 720px) { .nav { display: none; } }
 
 /* Первый экран */
-.hero { position: relative; overflow: hidden; padding: 48px 0 40px; }
+/* Первый экран уходит под прозрачную шапку (−68px = её высота), чтобы свечение
+   начиналось с самого верха страницы, а не обрезалось ровной линией под шапкой. */
+.hero { position: relative; overflow: hidden; margin-top: -68px; padding: calc(48px + 68px) 0 40px; }
 .hero::before {
   content: ""; position: absolute; inset: -20% -10% auto -10%; height: 120%; z-index: -1;
   background:
@@ -94,6 +96,13 @@ h1 .accent { background: linear-gradient(90deg, var(--primary), var(--primary-2)
 .btn.ghost { background: transparent; color: var(--muted); box-shadow: none; border: 1px solid var(--line); cursor: default; }
 .btn.ghost:hover { transform: none; }
 .btn svg { width: 20px; height: 20px; }
+/* Официальные значки магазинов (Google Play, RuStore): файлы не меняем — ни цвет,
+   ни пропорции, ни анимацию. Одинаковая высота: значок Google не меньше соседних;
+   отступ между ними — не меньше четверти высоты (правила Google и Apple). */
+.cta.badges { gap: 16px; align-items: center; }
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge img { height: 52px; width: auto; display: block; }
+@media (max-width: 720px) { .cta.badges { flex-direction: column; } }
 .soon { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
 
 /* Веер из трёх скриншотов: Главная спереди, Аналитика и Чеки позади */
@@ -122,7 +131,7 @@ h1 .accent { background: linear-gradient(90deg, var(--primary), var(--primary-2)
 
 /* Секции */
 section { padding: 64px 0; }
-@media (max-width: 720px) { section { padding: 44px 0; } .hero { padding: 28px 0 16px; } h2 { margin-bottom: 28px; } }
+@media (max-width: 720px) { section { padding: 44px 0; } .hero { padding: calc(28px + 68px) 0 16px; } h2 { margin-bottom: 28px; } }
 .kicker { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--primary-2); margin: 0 0 10px; }
 h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; letter-spacing: -.015em; margin: 0 0 40px; max-width: 22ch; }
 
