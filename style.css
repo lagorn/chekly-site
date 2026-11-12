@@ -27,7 +27,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* Переход по пунктам меню: заголовок блока не прилипает к шапке (шапка 68px, у section свой отступ 64px) */
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
 body {
   margin: 0;
   background: var(--bg);
